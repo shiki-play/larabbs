@@ -3,6 +3,5 @@
 
 @section('content')
   <h1>这里是首页</h1>
-  {{ storage_path('app/public') }}
-  {{storage_path('app')}}
+  {{$password?:$password=bcrypt('secret')}}
 @stop

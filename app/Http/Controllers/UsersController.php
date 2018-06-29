@@ -14,7 +14,9 @@ class UsersController extends Controller
         $this->middleware('auth',['except'=>['show']]);
     }
     public function show(User $user){
-        return view('users.show',compact('user'));
+        $password='';
+        $password?:$password=bcrypt('secret');
+        return view('users.show',compact('user','password'));
     }
     public function edit(User $user){
         $this->authorize('update',$user);
