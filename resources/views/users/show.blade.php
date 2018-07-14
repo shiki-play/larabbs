@@ -59,4 +59,6 @@
     </div>
 
 </div>
+
+{{-- $user->go() --}}
 @stop
