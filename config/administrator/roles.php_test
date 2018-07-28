@@ -1,0 +1,20 @@
+<?php
+use Spatie\Permission\Models\Role;
+
+return [
+     'title' =>'用户',
+      'single'=>'用户',
+
+    'model'=> User::class,
+
+
+        'edit_fields' =>[
+        'name'=>['title'=>'用户名'],
+        'email'=>['title'=>'邮箱'],
+        'password'=>['title'=>'密码','type'=>"password",],
+        'avatar'=> [
+            'title'=>'用户头像',
+            'type'=>'image',
+            'location'=>public_path() . '/uploads/images/avatars/',
+            ],
+];
